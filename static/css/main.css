@@ -1,0 +1,456 @@
+/* IE */
+input::-ms-clear,
+input::-ms-reveal{
+    opacity: 0;
+}
+/* chrome */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    opacity: 0;
+}
+
+body {
+    background-color: #f2f4f6;
+    margin: 0px;
+}
+
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #f2f4f6;
+    z-index: 100;
+}
+
+article{
+    margin-top: 70px;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+footer{
+    padding: 50px 30px;
+    height: auto;    
+    background-color: #e8f3ff;
+}
+
+/*------header css------*/
+
+.header_content_box{
+    margin-right: 200px;
+}
+.header_content_list{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+.header_content{
+    display: inline-block;
+    text-align: right;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 8px;
+    border: 0px solid white;
+    font-size: 15px;
+}
+.header_content:hover{
+    background-color: #e4e4e5;
+}
+.header_content a{
+    color: black;
+    text-decoration-line: none;
+}
+/*------article css------*/
+/*서비스1 검색*/
+.title_q{
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+    font-size: 30px;
+}
+.search_box{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 100px 0px 0px;
+}
+.search {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 44px;
+    border: 2px solid #466D1D;
+    border-radius: 40px;
+}
+.search input{
+    width: inherit;
+    height: inherit;
+    padding: 0px 17px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    border: none;
+    white-space: nowrap;
+}
+.search .btnClear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: inherit;
+    background: url("../img/x.png") center center no-repeat;
+    background-size: 40%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    right: 7px;
+  }
+.bla{
+    display: inline-block;
+    width:30px;
+}
+.search_button_box{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    margin-bottom: 100px;
+}
+.search_button{
+    background-color: #466D1D;
+    width: 130px;
+    height: 44px;
+    border: 0px solid #03b26c;
+    border-radius: 40px;
+    font-size: 17px;
+    color: aliceblue;
+}
+.search_button:hover{
+    background-color: #32612D;
+}
+/*서비스_intro*/
+.intro_box{
+    background-color: white;
+    height: auto;
+    width: inherit;
+}
+.intro_title{
+    font-size: 30px;
+    margin-top: 150px;
+    padding: 100px 50px 0px;
+}
+.intro_title_sub{
+    font-size: 20px;
+    padding: 40px 70px;
+}
+.intro_text_list{
+    display: flex;
+    justify-content: center;
+}
+.intro_text_box{
+    width: 270px;
+    height: 423px;
+    margin: 20px;
+    margin-bottom: 100px;
+    background-color: #f2f4f6;
+    border-radius: 9px;
+    border: 0px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.intro_text{
+    text-align: center;
+    font-size: 17px;
+}
+.intro_text_box:hover{
+    box-shadow: 0.7px 0.7px 0.7px 0.7px #e4e4e5;
+}
+/*지역별 농작물*/
+.intro_res_list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.intro_res_box{
+    width: 890px;
+    height: 470px;
+    margin-bottom: 100px;
+    border-radius: 9px;
+    border: 0px solid #466D1D;
+    cursor: pointer;
+}
+.intro_res_info{
+    margin: 25px 20px 40px;
+    font-size: 32px;
+}
+.intro_res_info2{
+    margin: -20px 35px 20px;
+    font-size: 17px;
+    color: gray;
+}
+.other_region_list_s{
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding-right: 18px;
+    background-color: white;
+}
+.other_region_s{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 4px;
+    border-radius: 8px;
+    border: 0px solid white;
+    margin: 7px 14px;
+}
+.other_region_s:hover{
+    color: #466D1D;
+    background-color: #e4e4e5;
+}
+.intro_res_rank_block{
+    display: flex;
+}
+.intro_res_ranking{
+    display: inline-block;
+    height:312px;
+    width: 60%;
+}
+.intro_res_ranking_box{
+}
+.intro_res_ranking_1_img{
+    margin-left: 210px;
+    padding-top: 45px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+.intro_res_ranking_1_info{
+    font-size: 20px;
+    margin-top: 45px;
+    margin-left: 35px;
+    text-align: center;
+}
+.intro_res_rank_box{
+    max-height: 312px;
+    overflow-y: scroll;
+    right: 0px;
+}
+.intro_res_rank_list{
+    list-style: none;
+    display: flex;
+    justify-content: right; 
+    flex-direction: column;
+    padding-left: 0px;
+}
+.intro_res_rank{
+    display: block;
+    margin-bottom: 2px;
+    text-align: center;
+    width: 300px;
+    padding: 7px 15px;
+    background-color: white;
+}
+.intro_res_rank:hover{
+    background-color: #f2f4f6;
+}
+.intro_crops_name{
+    font-size: 15px;
+}
+.intro_crops_bla1{
+    font-size: 10px;
+    color: gray;
+}
+.intro_crops_revenue{
+    font-size: 15px;
+}
+.intro_crops_bla2{
+    font-size: 10px;
+}
+.intro_res_ranking_con{
+    display: flex;
+    margin-left: 30px;
+}
+.intro_res_ranking_con_box2{
+    margin-top: 50px;
+}
+.intro_res_ranking_1_con_info{
+    font-size: 20px;
+    margin-top: 45px;
+    margin-left: 35px;
+    text-align: center;
+}
+.intro_res_ranking_1_con_img{
+    margin-left: 71px;
+    padding-top: 45px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+.intro_res_ranking_2_con_info{
+    font-size: 18px;
+    margin-top: 45px;
+    margin-left: 35px;
+    text-align: center;
+}
+.intro_res_ranking_2_con_img{
+    margin-left: 100px;
+    padding-top: 45px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+.intro_res_ranking_3_con_info{
+    font-size: 18px;
+    margin-top: 45px;
+    margin-left: 35px;
+    text-align: center;
+}
+.intro_res_ranking_3_con_img{
+    margin-left: 100px;
+    padding-top: 45px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+/*서비스2 목록*/
+.title_r{
+    padding: 50px 40px 20px;
+    font-size: 23px;
+}
+.other_region_box{
+}
+.other_region_list{
+    list-style: none;
+}
+.other_region{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 0px solid white;
+}
+.other_region:hover{
+    color: #466D1D;
+    background-color: #e4e4e5;
+}
+.region_child_box{
+
+}
+.region_child_list{
+    list-style: none;
+    margin-left: 10px;
+}
+.region_child{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 0px solid white;
+}
+.region_child:hover{
+    color: #466D1D;
+    background-color: #e4e4e5;
+}
+.region_child_child_box{
+
+}
+.region_child_child_list{
+    list-style: none;
+    margin-left: 10px;
+}
+.region_child_child{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 0px solid white;
+}
+.region_child_child:hover{
+    color: #466D1D;
+    background-color: #e4e4e5;
+}
+.blank_line1{
+    display: inline-block;
+    width: 2.45%;
+    border: none;
+}
+.blank_line2{
+    width: 95%;
+    display: inline-block;
+    background-color:#466D1D;
+    height: 2px;
+    border: none;
+    
+}
+.detail_block{
+    display: flex;
+}
+.crops_list{
+    list-style: none;
+    flex-direction: column;
+}
+.crops_info{
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 9px;
+}
+.crops_info:hover{
+    cursor: pointer;
+    background-color: white;
+}
+.crops_info_box{
+    padding-top:8px;
+}
+.crops_name{
+    font-size: 18px;
+}
+.crops_revenue{
+    font-size: 18px;
+}
+.crops_bla1{
+    font-size: 12px;
+    color: darkgray;
+}
+.crops_bla2{
+    font-size: 16px;
+    margin-left: -3px;
+}
+.crops_detail_box{
+    background-color: white;
+    height: 700px;
+    width: 1015px;
+    margin:10px 30px
+}
+
+/*------footer css------*/
+footer .footer_ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+.footer_list{
+    text-align: left;
+    display: inline-block;
+    margin: 0px 30px;
+}
+.footer_list h5{
+    font-size: 15px;
+}
+.footer_list h6{
+    font-size: 12px;
+}
+.footer_list h6:hover{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
