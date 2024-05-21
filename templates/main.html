@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyField</title>
+    <title>오아시스</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
@@ -14,42 +14,38 @@
                 <a href="{{ url_for('static', filename='img/grape.png') }}"></a>
             </div>
             <ul class="header_content_list">
-                <li class="header_content"><a href="http://naver.com">소개</a></li>
-                <li class="header_content"><a href="http://naver.com">고객센터</a></li>
-                <li class="header_content"><a href="http://naver.com">자주 묻는 질문</a></li>
+                <li class="header_content"><button>소개</button></li>
+                <li class="header_content"><button>고객센터</button></li>
+                <li class="header_content"><button>자주 묻는 질문</button></li>
             </ul>
         </div>
     </header>
     <article><!--메인-->
         <div id="service_1">
             <div class="title_q">
-                <h2>밭에 무엇을 심어야 할까요?</h2>
+                <h2>어느 지역 농산물 순위가 궁금하세요?</h2>
+                <h5>지역을 검색해보세요!</h5>
             </div>
             <div class="search_box">
                 <form id="search_value" class="search_form"></form>
                     <div id="search_region" class="search">
-                        <input type="search" placeholder="지역">
+                        <input id="search_region_input" type="search" placeholder="서울" onkeypress="goCropsList(event)">
                         <button class="btnClear" onClick="clearInput(this)"></button>
                     </div>
                     <div class="bla"></div>
-                    <div id="search_field" class="search">
-                        <input type="search" placeholder="평 수(㎡)">
-                        <button class="btnClear" onClick="clearInput(this)"></button>
-                    </div>
                 </form>
+                <button id="search_region_button" type="submit" form="search_value" class="search_button">검색</button>
             </div>
-            <div class="search_button_box">
-                <button type="submit" form="search_value" class="search_button">검색</button>
-            </div>
+            <div class="bla_box"></div>
         </div>
         <div id="service_intro">
             <div class="intro_box">
                 <h2 class="intro_title">여러분의 밭에 무엇을 심을지 추천해드립니다.</h2>
                 <h2 class="intro_title_sub">간편하게 이용해보세요!</h2>
                 <div class="intro_text_list">
-                    <div class="intro_text_box" onclick="showContent('A')"><span class="intro_text">지역 별 농작물 순위도 알려드려요.</span></div>
-                    <div class="intro_text_box" onclick="showContent('B')"><span class="intro_text">지역 별 강수량도 알려드려요.</span></div>
-                    <div class="intro_text_box" onclick="showContent('C')"><span class="intro_text">전국 1등 농작물은 무엇일까요.</span></div>
+                    <div class="intro_text_box" onclick="showContent('A')"><span class="intro_text">지역 별 농작물 순위</span></div>
+                    <div class="intro_text_box" onclick="showContent('B')"><span class="intro_text">지역 별 강수량</span></div>
+                    <div class="intro_text_box" onclick="showContent('C')"><span class="intro_text">전국 1등 농작물</span></div>
                 </div>
                 <div class="intro_res_list">
                     <div class="intro_res_box" id="intro_res_box1" style="display: none;">
@@ -192,7 +188,7 @@
                             
                         </div>
                     </div>
-
+                    <div class="bla2"></div>
                 </div>
             </div>
         </div>
@@ -200,44 +196,7 @@
             <div class="title_r">
                 <h2>충청북도 청주시 농작물을 추천드려요</h2>
             </div>
-            <div class="other_region_box">
-                <ul class="other_region_list">
-                    <li class="other_region">서울</li>
-                    <li class="other_region">경기</li>
-                    <li class="other_region">인천</li>
-                    <li class="other_region">강원</li>
-                    <li class="other_region" style="background-color: #e4e4e5;">충청</li>
-                    <li class="other_region">대전</li>
-                    <li class="other_region">세종</li>
-                    <li class="other_region">전라</li>
-                    <li class="other_region">광주</li>
-                    <li class="other_region">경상</li>
-                    <li class="other_region">울산</li>
-                    <li class="other_region">부산</li>
-                    <li class="other_region">제주</li>
-                </ul>
-            </div>
-            <div class="region_child_box">
-                <ul class="region_child_list">
-                    <li class="region_child" style="background-color: #e4e4e5;">충북</li>
-                    <li class="region_child">충남</li>
-                </ul>
-            </div>
-            <div class="region_child_child_box">
-                <ul class="region_child_child_list">
-                    <li class="region_child_child" style="background-color: #e4e4e5;">청주</li>
-                    <li class="region_child_child">충주</li>
-                    <li class="region_child_child">제천</li>
-                    <li class="region_child_child">보은</li>
-                    <li class="region_child_child">옥천</li>
-                    <li class="region_child_child">영동</li>
-                    <li class="region_child_child">증평</li>
-                    <li class="region_child_child">진천</li>
-                    <li class="region_child_child">괴산</li>
-                    <li class="region_child_child">음성</li>
-                    <li class="region_child_child">단양</li>
-                </ul>
-            </div>
+            {% include 'region.html' %}
             <hr class="blank_line1">
             <hr class="blank_line2">
             <hr class="blank_line1">
